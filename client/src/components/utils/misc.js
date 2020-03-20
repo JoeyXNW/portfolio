@@ -19,18 +19,17 @@ export const isFormValid = formData => {
 
 export const update = (element, state) => {
   const newState = { ...state };
-  const newFormData = newState.formData;
-  const newElement = newFormData[element.id];
+  const newFormData = { ...newState.formData };
+  const newElement = { ...newFormData[element.id] };
   newElement.value = element.event.target.value;
 
-  if (element.blur) {
-    let validData = validate(newElement);
-    newElement.valid = validData[0];
-    newElement.validationMessage = validData[1];
+  let validData = validate(newElement);
+  newElement.valid = validData[0];
+  newElement.validationMessage = validData[1];
 
-    newState.formSuccess = isFormValid(newFormData);
-  }
-
+  newState.formSuccess = isFormValid(newFormData);
+  newFormData[element.id] = newElement;
+  newState.formData = newFormData;
   return newState;
 };
 

@@ -20,7 +20,6 @@ const FormField = ({ id, formData, change }) => {
           <input
             {...formData.config}
             value={formData.value}
-            onBlur={event => change({ event, id, blur: true })}
             onChange={event => change({ event, id })}
           />
         );
@@ -30,7 +29,6 @@ const FormField = ({ id, formData, change }) => {
           <textarea
             {...formData.config}
             value={formData.value}
-            onBlur={event => change({ event, id, blur: true })}
             onChange={event => change({ event, id })}
           />
         );

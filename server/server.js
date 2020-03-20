@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 
@@ -10,25 +11,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors());
 
-const port = 4444;
-app.listen(port, () => {
-  console.log("We are live on port 4444");
-});
+//for heroku
+app.use(express.static("client/build"));
 
 app.post("/api/email", (req, res) => {
   var data = req.body;
 
   var smtpTransport = nodemailer.createTransport({
     service: "Gmail",
-    // port: 465,
     auth: {
-      user: "xwang985@gmail.com",
+      user: "test.app.personal@gmail.com",
       pass: process.env.MAIL_PASSWORD
     }
   });
 
   var mailOptions = {
-    from: "xwang985@gmail.com",
     to: "xwang985@gmail.com",
     subject: data.subject,
     html: `<p>${data.name}</p>
@@ -44,4 +41,20 @@ app.post("/api/email", (req, res) => {
     }
     smtpTransport.close();
   });
+});
+
+//===========================================
+//             Default
+//===========================================
+// only for production
+if (process.env.NODE_ENV === "production") {
+  const path = require("path");
+  app.get("/*", (req, res) => {
+    res.sendfile(path.resolve(__dirname, "../client", "build", "index.html"));
+  });
+}
+
+const port = process.env.PORT || 3002;
+app.listen(port, () => {
+  console.log(`Server Running at ${port}`);
 });

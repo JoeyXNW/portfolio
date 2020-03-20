@@ -6,6 +6,7 @@ import axios from "axios";
 
 const initialState = {
   formSuccess: false,
+  submitSuccess: false,
   formData: {
     name: {
       element: "input",
@@ -64,12 +65,16 @@ class ContactFrom extends Component {
     event.preventDefault();
 
     let dataToSubmit = generateData(this.state.formData);
-    console.log(dataToSubmit);
-
-    axios
-      .post("/api/email", dataToSubmit)
-      .then(res => console.log("yay, data has been sent successfully"))
-      .catch(err => console.log("sorry, something is wrong"));
+    axios.post("/api/email", dataToSubmit).then(res => {
+      if (res.data === "Success") {
+        this.setState(initialState);
+        this.setState({ submitSuccess: true }, () =>
+          setTimeout(() => {
+            this.setState({ submitSuccess: false });
+          }, 3000)
+        );
+      }
+    });
   };
 
   updateForm = element => {
@@ -95,13 +100,20 @@ class ContactFrom extends Component {
         <div className="form">
           <form>
             {this.showFormField()}
-            <div
-              className={`button ${
-                !this.state.formSuccess ? "disable_button" : ""
-              }`}
-              onClick={event => this.submitForm(event)}
-            >
-              Submit
+            <div className="button_block">
+              <div
+                className={`button ${
+                  !this.state.formSuccess ? "disable_button" : ""
+                }`}
+                onClick={event => this.submitForm(event)}
+              >
+                Submit
+              </div>
+              {this.state.submitSuccess && (
+                <div className="submit_success">
+                  Thanks for reaching out to me. I will get back to you soon.
+                </div>
+              )}
             </div>
           </form>
         </div>

@@ -11,6 +11,18 @@
   display: block;
 }
 
+.contact_form .form .button_block {
+  text-align: right;
+  display: flex;
+}
+
+.submit_success {
+  flex: 1;
+  text-align: center !important;
+  margin: auto;
+}
+
 .button.disable_button {
   pointer-events: none;
+  opacity: 0.2;
 }

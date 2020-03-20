@@ -1,12 +1,14 @@
+import "./resources/style.css";
+
 import React from "react";
 import ReactDOM from "react-dom";
-import "./resources/style.css";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import Routes from "./Routes";
-import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <Routes />
-  </BrowserRouter>,
+  </Router>,
   document.getElementById("root")
 );

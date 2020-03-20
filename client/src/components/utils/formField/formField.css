@@ -1,6 +1,6 @@
 .formBlock {
   width: 100%;
-  margin: 2.5rem;
+  margin: 1rem auto;
 }
 
 input,
@@ -12,11 +12,10 @@ textarea {
   border-radius: 3px;
   font-weight: 300;
   width: 100%;
-  /* box-sizing: border-box; */
 }
 
 textarea {
-  height: 100px;
+  height: 10rem;
 }
 
 .error_label {

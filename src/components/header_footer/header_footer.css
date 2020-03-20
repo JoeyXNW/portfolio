@@ -1,0 +1,84 @@
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  color: #ffffff;
+  padding: 15px 0px;
+  margin: auto;
+  z-index: 1;
+  border-bottom: 2px solid var(--darkGreen);
+}
+
+header .header_container {
+  display: flex;
+  padding: 0 30px;
+  vertical-align: middle;
+}
+
+header.scrolling_down {
+  background-color: rgba(186, 199, 167, 0) !important;
+  border-bottom: none;
+}
+
+header.scrolling_down .header_button {
+  color: rgba(186, 199, 167, 0) !important;
+}
+
+header .header_container .header_logo {
+  flex: 1;
+  margin: auto;
+  width: 3%;
+  opacity: 1 !important;
+}
+
+header .header_container .header_letter {
+  width: 3%;
+  height: auto;
+  margin: auto;
+  opacity: 1 !important;
+}
+
+header a {
+  height: 100%;
+}
+
+header .header_button {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+}
+
+header .header_button:hover,
+header .header_button.active {
+  color: black;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 30px 0px;
+  border-top: 2px solid var(--darkGreen);
+  background: var(--lightGreen);
+}
+
+footer .img_cover {
+  margin: 0 auto;
+}
+
+footer .footer_discl {
+  margin: 10px 0px;
+  text-transform: capitalize;
+}
+
+footer .footer_icon {
+  margin: auto;
+  font-size: 35px;
+}
+
+footer .footer_icon .icon {
+  width: 8%;
+}

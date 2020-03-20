@@ -1,0 +1,13 @@
+.button {
+  display: inline-block;
+  margin-right: 12px;
+  background: var(--lightGreen);
+  padding: 8px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--darkGreen);
+}

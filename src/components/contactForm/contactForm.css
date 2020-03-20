@@ -1,0 +1,16 @@
+.contact_form {
+  width: 100%;
+  text-align: center;
+  background: var(--mediumGreen);
+  padding: 4%;
+}
+
+.contact_form .form {
+  width: 55%;
+  margin: auto;
+  display: block;
+}
+
+.button.disable_button {
+  pointer-events: none;
+}

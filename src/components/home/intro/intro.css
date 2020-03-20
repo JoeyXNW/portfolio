@@ -1,0 +1,74 @@
+.intro {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  text-align: center;
+}
+
+.intro .split_left {
+  width: 50%;
+  margin: auto;
+}
+
+.intro .split_right {
+  flex: 1;
+  margin: auto;
+}
+
+.intro .split_left .left_container {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+
+.intro .left_container .profile {
+  height: auto;
+  width: 100%;
+  border: 3px;
+}
+
+.intro .left_container h2 {
+  margin: 5px auto;
+}
+
+.intro .left_container h3 {
+  border-bottom: 3px solid black;
+  padding-bottom: 5px;
+}
+
+.intro .left_container p {
+  text-align: left !important;
+}
+
+/* ******************SKILL BAR****************************** */
+.intro .split_right .right_container {
+  display: block;
+  margin: auto;
+  padding: 4%;
+  width: 90%;
+}
+
+.intro .skillContainer {
+  width: 100%;
+  background-color: var(--lightYellow);
+  display: flex;
+  margin-bottom: 15px;
+  height: 30px;
+}
+
+.intro .skillContainer .name {
+  width: 125px;
+  justify-content: center;
+  background: var(--lightGreen);
+}
+
+.intro .skillContainer .skill {
+  background-color: var(--darkGreen);
+}
+
+/* .intro .skillContainer .percent {
+  text-align: right;
+  flex: 1;
+  padding-right: 5px;
+  margin: auto;
+} */

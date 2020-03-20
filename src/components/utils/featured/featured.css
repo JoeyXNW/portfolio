@@ -1,0 +1,14 @@
+.featured {
+  overflow: hidden;
+  text-align: center;
+}
+
+.featured .container {
+  width: 85%;
+  margin: auto;
+  margin-top: 300px;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 200%;
+  text-align: center;
+}

@@ -5,11 +5,19 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer_icon">
-        <a href="https://github.com/xwang985" target="_blank">
+        <a
+          href="https://github.com/xwang985"
+          target="_blank "
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-github icon"></i>
         </a>
 
-        <a href="mailto:xwang985@gmail.com">
+        <a
+          href="mailto:xwang985@gmail.com"
+          target="_blank "
+          rel="noopener noreferrer"
+        >
           <i className="fas fa-envelope icon"></i>
         </a>
       </div>

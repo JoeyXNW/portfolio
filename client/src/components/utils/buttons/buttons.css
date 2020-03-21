@@ -6,6 +6,7 @@
   color: #ffffff;
   text-transform: uppercase;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .button:hover {

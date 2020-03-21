@@ -4,15 +4,16 @@ header {
   width: 100%;
   color: #ffffff;
   padding: 15px 0px;
-  margin: auto;
+  /* margin: auto; */
   z-index: 1;
   border-bottom: 2px solid var(--darkGreen);
 }
 
 header .header_container {
   display: flex;
-  padding: 0 30px;
   vertical-align: middle;
+  max-width: 90%;
+  margin: auto;
 }
 
 header.scrolling_down {

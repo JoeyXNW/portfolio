@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "./portfolio.css";
 import Featured from "../utils/featured";
 import ProfileBox from "../utils/profileBox";
@@ -66,6 +66,10 @@ const displayPortfolio = () =>
   porofolio.map(item => <ProfileBox key={item.name} {...item} />);
 
 const Portfolio = () => {
+  useEffect(() => {
+    document.title = "Portfolio - Joey";
+  }, []);
+
   return (
     <>
       <Featured background="#bac7a7">
@@ -77,5 +81,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-// addStyle={{ background: "#bac7a7" }}

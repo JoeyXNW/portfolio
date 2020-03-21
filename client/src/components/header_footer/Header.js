@@ -5,7 +5,6 @@ import { withRouter } from "react-router-dom";
 
 class Header extends Component {
   state = {
-    isScrollingDown: false,
     cursorPosition: 0,
     headerShow: false,
     activeItem: "",
@@ -28,6 +27,13 @@ class Header extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
+  //  scroll to the top when navigating to a new page
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      window.scrollTo(0, 0);
+    }
+  }
+
   handleMouseEnter = () => {
     const { isScrollingDown } = this.state;
     if (isScrollingDown) {
@@ -43,7 +49,7 @@ class Header extends Component {
   };
 
   handleScroll = () => {
-    const { cursorPosition, isScrollingDown, headerShow } = this.state;
+    const { cursorPosition } = this.state;
     const position = window.scrollY;
     position > cursorPosition
       ? this.setState({ isScrollingDown: true })
@@ -56,6 +62,7 @@ class Header extends Component {
       : this.setState({ headerShow: false });
   };
 
+  // highlight the current page title
   handleClick = name => {
     this.setState({ activeItem: name });
   };

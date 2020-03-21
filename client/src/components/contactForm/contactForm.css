@@ -2,11 +2,11 @@
   width: 100%;
   text-align: center;
   background: var(--mediumGreen);
-  padding: 4%;
+  padding: 10px;
 }
 
 .contact_form .form {
-  width: 55%;
+  width: 40%;
   margin: auto;
   display: block;
 }
@@ -25,4 +25,8 @@
 .button.disable_button {
   pointer-events: none;
   opacity: 0.2;
+}
+
+.contact_form h1 {
+  text-transform: uppercase;
 }

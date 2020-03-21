@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./intro.css";
 import profilePic from "../../../resources/pic/joey.JPG";
 import SkillBar from "./SkillBar";
@@ -27,7 +27,7 @@ const Intro = () => {
       <Fade left>
         <div className="split_left">
           <div className="left_container">
-            <img className="profile" src={profilePic} alt="profile picture" />
+            <img className="profile" src={profilePic} alt="profile" />
             <h2>Xining (Joey) Wang</h2>
             <h3>Full Stack Developer</h3>
             <p>

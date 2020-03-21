@@ -8,7 +8,7 @@ const Buttons = ({ url, title, type = "external" }) => {
     switch (type) {
       case "external":
         renderedButton = (
-          <a href={url} target="_blank">
+          <a href={url} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         );

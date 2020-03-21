@@ -2,10 +2,11 @@
   width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
+  color: black;
 }
 
 .portfolio_container {
-  width: 95%;
+  max-width: 90%;
   display: flex;
   margin: auto;
   text-align: center;
@@ -15,13 +16,11 @@
 .portfolio_container .left {
   width: 40%;
   height: 100%;
-  background: red;
   margin: auto;
 }
 
 .portfolio_container .left .left_container {
   width: 90%;
-  background: white;
   margin: auto;
 }
 
@@ -32,13 +31,11 @@
 
 .portfolio_container .left .left_container p {
   margin: 10px auto;
-  /* position: absolute; */
 }
 
 .portfolio_container .right {
   flex: 1;
   height: 100%;
-  background: grey;
 }
 
 .portfolio_container .right .right_container {
@@ -53,7 +50,7 @@
 }
 
 .portfolio_container .right .right_container .image:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transform-origin: 50% 50%;
   transition-duration: 1s;
 }

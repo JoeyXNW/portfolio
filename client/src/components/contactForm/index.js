@@ -97,6 +97,9 @@ class ContactFrom extends Component {
   render() {
     return (
       <div className="contact_form">
+        <div className="contact_me">
+          <h1>contact me</h1>
+        </div>
         <div className="form">
           <form>
             {this.showFormField()}

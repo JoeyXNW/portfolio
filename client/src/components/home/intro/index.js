@@ -1,9 +1,8 @@
 import React from "react";
-import "./intro.css";
 import profilePic from "../../../resources/pic/joey.JPG";
 import SkillBar from "./SkillBar";
 import { Fade } from "react-reveal";
-import Buttons from "../../utils/buttons";
+import Buttons from "../../utils/Buttons";
 
 const skills = [
   { name: "Python", width: 80 },

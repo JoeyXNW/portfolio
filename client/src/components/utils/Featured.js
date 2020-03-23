@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./featured.css";
 
 class Featured extends Component {
   state = {};

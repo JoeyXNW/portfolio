@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  margin-right: 0.5rem;
+  background: $lightGreen;
+  padding: 0.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: $button-font-size;
+}
+
+.button:hover {
+  background: $darkGreen;
+}
+
+@include small-breakpoint {
+  .button {
+    margin-right: 0.8rem;
+    padding: 8px;
+  }
+}

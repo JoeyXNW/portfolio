@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Intro from "./intro";
-import Featured from "../utils/featured";
+import Featured from "../utils/Featured";
 
 const Home = () => {
   useEffect(() => {

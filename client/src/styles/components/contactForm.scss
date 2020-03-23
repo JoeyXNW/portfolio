@@ -1,0 +1,40 @@
+.contact_form {
+  width: 100%;
+  text-align: center;
+  background: $mediumGreen;
+  padding: 0.8rem;
+
+  .form {
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+
+  .button_block {
+    display: flex;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.submit_success {
+  flex: 1;
+  text-align: center !important;
+  margin: auto;
+  color: black;
+}
+
+.button.disable_button {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+@include small-breakpoint {
+  .contact_form {
+    .form {
+      width: 40%;
+    }
+  }
+}

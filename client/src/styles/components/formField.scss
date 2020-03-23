@@ -1,26 +1,36 @@
 .formBlock {
   width: 100%;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
 }
 
 input,
 textarea {
   background: #fafafa;
   border: 1px solid #e9e9e9;
-  font-size: 17px;
-  padding: 8px;
+  padding: 0.5rem;
   border-radius: 3px;
   font-weight: 300;
   width: 100%;
+  font-size: 1rem;
 }
 
 textarea {
-  height: 10rem;
+  height: 7rem;
 }
 
 .error_label {
   color: #f44336;
   display: block;
-  font-size: 15px;
+  font-size: 1rem;
   text-align: left !important;
+}
+
+@include small-breakpoint {
+  .formBlock {
+    margin: 1rem auto;
+  }
+
+  textarea {
+    height: 10rem;
+  }
 }

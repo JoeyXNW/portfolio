@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import "./contactForm.css";
-import FormField from "../utils/formField";
-import { update, generateData } from "../utils/misc";
+import FormField from "./utils/FormField";
+import { update, generateData } from "./utils/misc";
 import axios from "axios";
 
 const initialState = {
@@ -58,7 +57,7 @@ const initialState = {
   }
 };
 
-class ContactFrom extends Component {
+class ContactForm extends Component {
   state = initialState;
 
   submitForm = event => {
@@ -125,4 +124,4 @@ class ContactFrom extends Component {
   }
 }
 
-export default ContactFrom;
+export default ContactForm;

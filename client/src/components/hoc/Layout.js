@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "../header_footer/Header";
 import Footer from "../header_footer/Footer";
-import ContactFrom from "../contactForm";
+import ContactForm from "../ContactForm";
 
 class Layout extends Component {
   state = {};
@@ -10,7 +10,7 @@ class Layout extends Component {
       <>
         <Header />
         {this.props.children}
-        <ContactFrom />
+        <ContactForm />
         <Footer />
       </>
     );

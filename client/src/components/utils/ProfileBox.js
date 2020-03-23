@@ -1,6 +1,5 @@
 import React from "react";
-import "./profileBox.css";
-import Buttons from "../buttons";
+import Buttons from "./Buttons";
 import { Slide } from "react-reveal";
 
 const ProfileBox = props => {

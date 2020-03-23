@@ -1,9 +1,3 @@
-//Wave Guitar Shop
-// skills used: React, Redux, Express, MongoDB
-
-//Mancheseter footer team
-// skills used: React, firebase
-
 // The Venue is Front End Web application showcasing a concert hall and featuring a popular pop artist; the objective for this project is:
 
 // _ The MVC model for React containers and components
@@ -39,3 +33,5 @@
 //creating the user validation forms and using the RESTful services for data communication with Redux
 
 //familiar with MERN stack development MongoDB, Express, React and NodeJS
+
+Starting with building a foundation boilerplate for development and production with all the modules and libraries needed, and then translating wireframes and mockups into a clean and neat HTML, CSS code considering web SEO standards, cross browser compatibility and responsiveness. Managing application states and populating application's components with data received from APIs as well as testing components and handling errors

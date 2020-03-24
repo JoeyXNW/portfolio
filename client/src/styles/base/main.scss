@@ -17,14 +17,13 @@ body {
   color: white;
   font-size: $font-size;
 
-  h2 {
-    font-size: $h2-mobile;
-    border-bottom: 3px solid black;
-    margin: 0.5px auto;
-  }
-
   h3 {
     font-size: $h3-mobile;
+    margin: 0.5rem auto;
+  }
+
+  h4 {
+    font-size: $h4-mobile;
     margin: 0.25rem auto;
   }
 }
@@ -40,12 +39,12 @@ a {
       font-size: $h1;
     }
 
-    h2 {
-      font-size: $h2;
-    }
-
     h3 {
       font-size: $h3;
+    }
+
+    h4 {
+      font-size: $h4;
     }
   }
 }

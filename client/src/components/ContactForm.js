@@ -13,7 +13,7 @@ const initialState = {
       config: {
         name: "name",
         type: "text",
-        placeholder: "Name"
+        placeholder: "Name*"
       },
       valid: false,
       validationMessage: ""
@@ -25,7 +25,7 @@ const initialState = {
       config: {
         name: "email",
         type: "email",
-        placeholder: "Email"
+        placeholder: "Email*"
       },
       valid: false,
       validationMessage: ""
@@ -37,7 +37,7 @@ const initialState = {
       config: {
         name: "subject",
         type: "text",
-        placeholder: "Subject"
+        placeholder: "Subject*"
       },
       valid: false,
       validationMessage: ""
@@ -49,7 +49,7 @@ const initialState = {
       config: {
         name: "message",
         type: "text",
-        placeholder: "Message"
+        placeholder: "Message*"
       },
       valid: false,
       validationMessage: ""
@@ -97,7 +97,7 @@ class ContactForm extends Component {
     return (
       <div className="contact_form">
         <div className="contact_me">
-          <h1>contact me</h1>
+          <h3>CONTACT ME</h3>
         </div>
         <div className="form">
           <form>

@@ -1,39 +1,33 @@
-import React, { Component } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Slide } from "react-reveal";
 
-class SkillBar extends Component {
-  state = {
-    start: 0,
-    end: 100
-  };
+const SkillBar = ({ name }) => {
+  const [start, setStart] = useState(0);
+  const end = 100;
+  const didMountRef = useRef(false);
 
-  width = () => {
-    const { start, end } = this.state;
+  const width = () => {
     if (start < end) {
-      this.setState({ start: start + 1 });
+      setStart(start + 1);
     }
   };
 
-  componentDidUpdate() {
-    setTimeout(() => {
-      this.width();
-    }, 30);
-  }
+  useEffect(() => {
+    if (didMountRef.current) {
+      const timer = setTimeout(width, 30);
+      return () => clearTimeout(timer);
+    } else didMountRef.current = true;
+  });
 
-  render() {
-    return (
-      <Slide right onReveal={this.width}>
-        <div className="skillContainer">
-          <div className="name">{this.props.name}</div>
-          <div
-            className="skill"
-            style={{ width: `${this.state.start}%` }}
-          ></div>
-          {/* <div className="percent">{width}%</div> */}
-        </div>
-      </Slide>
-    );
-  }
-}
+  return (
+    <Slide right onReveal={width}>
+      <div className="skillContainer">
+        <div className="name">{name}</div>
+        <div className="skill" style={{ width: `${start}%` }}></div>
+        {/* <div className="percent">{width}%</div> */}
+      </div>
+    </Slide>
+  );
+};
 
 export default SkillBar;

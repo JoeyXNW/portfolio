@@ -16,9 +16,7 @@ const skills = [
 ];
 
 const showSkills = () =>
-  skills.map(skill => (
-    <SkillBar key={skill.name} width={skill.width} name={skill.name} />
-  ));
+  skills.map(skill => <SkillBar key={skill.name} name={skill.name} />);
 
 const Intro = () => {
   return (
@@ -27,8 +25,8 @@ const Intro = () => {
         <div className="split_left">
           <div className="left_container">
             <img className="profile" src={profilePic} alt="profile" />
-            <h2>Xining (Joey) Wang</h2>
-            <h3>Full Stack Developer</h3>
+            <h3>Xining (Joey) Wang</h3>
+            <h4>Full Stack Developer</h4>
             <p>
               I am a developer based in Montreal, Canada. I have a passion for
               web development and algorithom.

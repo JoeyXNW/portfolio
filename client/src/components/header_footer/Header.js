@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LetterJ from "../../resources/pic/letterJ.png";
+import LetterJ from "../../resources/pic/letterJ.jpeg";
 import { withRouter } from "react-router-dom";
 
 class Header extends Component {
@@ -18,7 +18,9 @@ class Header extends Component {
   componentDidMount() {
     const currentPath = this.props.location.pathname;
     const currentItem = this.state.items.find(item => item.to === currentPath);
-    this.setState({ activeItem: currentItem.name });
+
+    //check currentItem exists or not due to the potential existance of not found page
+    this.setState({ activeItem: currentItem ? currentItem.name : "home" });
 
     window.addEventListener("scroll", this.handleScroll);
   }
@@ -84,20 +86,23 @@ class Header extends Component {
     ));
 
   render() {
+    const { isScrollingDown, headerShow } = this.state;
     return (
       <header
-        className={`${this.state.isScrollingDown ? "scrolling_down" : ""}`}
-        style={{
-          backgroundColor: this.state.headerShow
-            ? "var(--lightGreen)"
-            : "transparent"
-        }}
+        className={`${isScrollingDown ? "scrolling_down" : ""} ${
+          !headerShow ? "header_hidden" : ""
+        }`}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
         <div className="header_container">
           <div className="header_logo">
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => {
+                this.handleClick("home");
+              }}
+            >
               <img src={LetterJ} alt="header logo" className="header_letter" />
             </Link>
           </div>

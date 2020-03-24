@@ -10,7 +10,7 @@ const ProfileBox = props => {
         <Slide bottom>
           <div className="left">
             <div className="left_container">
-              <h2>{name}</h2>
+              <h4>{name}</h4>
               <p>{skills}</p>
               <p>{description}</p>
               <Buttons url={button[0].demoUrl} title="View Demo" />

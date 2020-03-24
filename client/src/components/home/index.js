@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <Featured background="var(--lightGreen)">
+      <Featured>
         <div className="name">Joey</div>
         <div className="description">a web developer</div>
       </Featured>

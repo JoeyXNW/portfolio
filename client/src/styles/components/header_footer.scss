@@ -6,6 +6,7 @@ header {
   padding: 0.5rem 0.8rem;
   z-index: 1;
   border-bottom: 2px solid $darkGreen;
+  background: $lightGreen;
 
   .header_container {
     display: flex;
@@ -21,6 +22,10 @@ header {
     .header_button {
       color: rgba(186, 199, 167, 0) !important;
     }
+  }
+
+  &.header_hidden {
+    background: transparent;
   }
 
   .header_logo {

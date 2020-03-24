@@ -7,8 +7,7 @@ class Featured extends Component {
       <div
         className="featured"
         style={{
-          height: `${window.innerHeight}px`,
-          background: `${this.props.background}`
+          height: `${window.innerHeight}px`
         }}
       >
         <div className="container">{this.props.children}</div>

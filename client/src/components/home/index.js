@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Intro from "./intro";
-import Featured from "../utils/Featured";
+import LoadingPage from "../utils/LoadingPage";
 
 const Home = () => {
   useEffect(() => {
@@ -9,10 +9,16 @@ const Home = () => {
 
   return (
     <>
-      <Featured>
-        <div className="name">Joey</div>
-        <div className="description">a web developer</div>
-      </Featured>
+      <LoadingPage>
+        <div className="featured">
+          <div className="page_name back_name">
+            <div className="firstName">Xining</div>
+            <div className="lastName">wang</div>
+          </div>
+          <div className="description back_name">a web developer</div>
+        </div>
+      </LoadingPage>
+
       <Intro />
     </>
   );

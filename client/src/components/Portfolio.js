@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from "react";
-import Featured from "./utils/Featured";
 import ProfileBox from "./utils/ProfileBox";
 import GuitarPic from "../resources/pic/portfolio/guitar.png";
 import ManCity from "../resources/pic/portfolio/mancity.png";
 import Venue from "../resources/pic/portfolio/venue.png";
 import FaceDetect from "../resources/pic/portfolio/facedetect.png";
 import Grocery from "../resources/pic/portfolio/grocery.png";
+import LoadingPage from "./utils/LoadingPage";
 
 const portfolio = [
+  {
+    name: "Grocery Shop",
+    type: "Angular",
+    image: `${Grocery}`,
+    skills: "Angular, Typescript, Bootstrap, Firebase NoSQL",
+    description:
+      "This website was builted with Angular framework and Firebase NoSQL. It implemented features such as template-driven (ngModel) and reactive forms, events in components/directives",
+    button: [
+      {
+        demoUrl: "https://groceryshop-3ed26.firebaseapp.com/",
+        github: "https://github.com/xwang985/groceryshop"
+      }
+    ]
+  },
   {
     name: "Wave Guitar Shop",
     type: "React",
@@ -63,20 +77,6 @@ const portfolio = [
         github: "https://github.com/xwang985/venue_display"
       }
     ]
-  },
-  {
-    name: "Grocery Shop",
-    type: "Angular",
-    image: `${Grocery}`,
-    skills: "Angular, Typescript, Bootstrap, Firebase NoSQL",
-    description:
-      "This website was builted with Angular framework and Firebase NoSQL. It implemented features such as template-driven (ngModel) and reactive forms, events in components/directives",
-    button: [
-      {
-        demoUrl: "https://groceryshop-3ed26.firebaseapp.com/",
-        github: "https://github.com/xwang985/groceryshop"
-      }
-    ]
   }
 ];
 
@@ -122,9 +122,11 @@ const Portfolio = () => {
 
   return (
     <>
-      <Featured>
-        <p>My portfolio</p>
-      </Featured>
+      <LoadingPage>
+        <div className="featured">
+          <div className="project back_name">Projects</div>
+        </div>
+      </LoadingPage>
       <div className="portfolio_title">
         <div className="item">{displayTitle()}</div>
       </div>

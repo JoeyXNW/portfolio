@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LetterJ from "../../resources/pic/letterJ.jpeg";
+import LetterJ from "../../resources/pic/letterJ.png";
 import { withRouter } from "react-router-dom";
 
 class Header extends Component {
@@ -10,8 +10,7 @@ class Header extends Component {
     activeItem: "",
     items: [
       { to: "/", name: "home" },
-      { to: "/portfolio", name: "portfolio" },
-      { to: "/resume", name: "resume" }
+      { to: "/portfolio", name: "portfolio" }
     ]
   };
 
@@ -107,6 +106,9 @@ class Header extends Component {
             </Link>
           </div>
           {this.showHeaderItem()}
+          <a href="resume.pdf" target="_blank " rel="noopener noreferrer">
+            <div className="header_button">Resume</div>
+          </a>
         </div>
       </header>
     );

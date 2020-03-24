@@ -25,17 +25,19 @@ const Intro = () => {
         <div className="split_left">
           <div className="left_container">
             <img className="profile" src={profilePic} alt="profile" />
-            <h3>Xining (Joey) Wang</h3>
-            <h4>Full Stack Developer</h4>
             <p>
-              I am a developer based in Montreal, Canada. I have a passion for
-              web development and algorithom.
+              I am a developer currenly living in Montreal, Canada. I have a
+              passion for web development and algorithom. I enjoy working that
+              challenges me, and web design gives me the opprotunity to keep
+              pushing myself to learn new technologies. I am a motivated person,
+              and I strive to be a better developer that brings webistes to
+              cutomers that are user friendly, easy to manage with clean code
             </p>
-            <Buttons
+            {/* <Buttons
               url="/"
               title="contact me for more detail"
               type="internal"
-            />
+            /> */}
           </div>
         </div>
       </Fade>

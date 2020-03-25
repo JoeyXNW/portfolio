@@ -33,11 +33,7 @@ const Intro = () => {
               and I strive to be a better developer that brings webistes to
               cutomers that are user friendly, easy to manage with clean code
             </p>
-            {/* <Buttons
-              url="/"
-              title="contact me for more detail"
-              type="internal"
-            /> */}
+            <Buttons url="/portfolio" title="view projects" type="internal" />
           </div>
         </div>
       </Fade>

@@ -10,7 +10,7 @@ class Header extends Component {
     activeItem: "",
     items: [
       { to: "/", name: "home" },
-      { to: "/portfolio", name: "portfolio" }
+      { to: "/project", name: "projects" }
     ]
   };
 
@@ -107,7 +107,9 @@ class Header extends Component {
           </div>
           {this.showHeaderItem()}
           <a href="resume.pdf" target="_blank " rel="noopener noreferrer">
-            <div className="header_button">Resume</div>
+            <div className="header_button" title="Open resume in a new tab">
+              Resume
+            </div>
           </a>
         </div>
       </header>

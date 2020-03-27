@@ -20,7 +20,7 @@ app.post("/api/email", (req, res) => {
   var smtpTransport = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-      user: "test.app.personal@gmail.com",
+      user: process.env.MAIL_ADDRESS,
       pass: process.env.MAIL_PASSWORD
     }
   });
